@@ -6,7 +6,6 @@ public class LoopsAndIfStatements {
 		// TODO Auto-generated method stub
 		// User input, uses the Scanner Object;
 		// Scanner Object
-		Scanner kb = new Scanner(System.in);
 		// accepting integers
 		/*
 		 * System.out.println("What is your age?"); int age = Integer.parseInt(
@@ -34,20 +33,26 @@ public class LoopsAndIfStatements {
 		Scanner kb = new Scanner(System.in);
 		//worlds worst Guessing Game
 		int rand = (int)(Math.random() * 10 + 1 );
-		System.out.println(rand);
 		
-		System.out.println("Guess my number 1 - 10");
-		int num = kb.nextInt();
+		//World Worst Guessing Game
+		System.out.println(rand);
+		System.out.println("Guess my number 1 - 10. you have unlimited tries");
+		boolean run = true;
+		while(run) {
+			int num = kb.nextInt();
 			
-		//the if statement
-		if( num > rand) {
-			System.out.println("too high!!");
-		}
-		else if(num < rand) {
-			System.out.println("too low");
-		}
-		else{
-			System.out.println("GOT IT!!");
+			//the if statement
+			if( num > rand) {
+				System.out.println("too high!! Guess Again!");
+			}
+			else if(num < rand) {
+				System.out.println("too low. Guess Again!");
+			}
+			else{
+				System.out.println("GOT IT!!");
+				run = false;
+			}
+		
 		}
 		
 
